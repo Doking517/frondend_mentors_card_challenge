@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
-/* @font-face {
-    font-family: "Overpass";
-    src: url("https://fonts.google.com/specimen/Overpass");
-    font-weight: 700;
-} */
+
 
 :root{
     --Orange: hsl(25, 97%, 53%);
@@ -11,7 +7,6 @@
     --Light-Grey: hsl(217, 12%, 63%);
     --Dark-Blue: hsl(213, 19%, 18%);
     --Very-Dark-Blue: hsl(216, 12%, 8%);
-    --test: hsl(210, 19%, 18%);
     --p-font-size: 15px;
     --Mobile: 375px;
     --Desktop: 1440px;
@@ -28,22 +23,38 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100dvh;
+    height: 100vh;
+    gap: 2em;
+}
+.colored{
+    background-color: red;
 }
 
 @media (max-width: 375px) {
-   
-    
-    .container{
-        display: flex;
-        flex-direction: column;
-        width: 76dvw;
-        background-color: var(--Dark-Blue);
-        padding: 1.5em;
-        border-radius: 1em;
+   /* Global styling start*/
+        .card_style{
+            display: flex;
+            flex-direction: column;
+            width: 76dvw;
+            background-color: var(--Dark-Blue);
+            padding: 2em 1.5em;
+            border-radius: 1em;
+            height: auto;
+        }
+        .card_content_text{
+            color: var(--Light-Grey);
+            font-size: var(--p-font-size);
+            
+        }
+   /* global styling end */
+
+    /* rating card component start */
+    .rating_state_container{
+        
+        display: block;
         
     }
-    .container .star{
+    .rating_state_container .star{
         
         background-color: var(--Very-Dark-Blue);
         padding: 1em;
@@ -54,7 +65,7 @@ body{
     transform: scale(.9);
    }
     .text_part{
-        margin: 2.5em 0;
+        margin: 1em 0;
         width: auto;
         /* border: 2px green solid; */
     }
@@ -62,12 +73,9 @@ body{
     .text_part .card_title{
         font-family: "Overpass",sans-serif;
         font-weight: 700;
-        margin-top: .5em;
+        margin-top: 1.5em;
     }
-    .text_part .card_content_text{
-        color: var(--Light-Grey);
-        font-size: var(--p-font-size);
-    }
+  
 
     .rating_container{
         display: flex;
@@ -85,7 +93,7 @@ body{
     .rating_number{
         color: var(--Light-Grey);
         cursor: pointer;
-        transition: background-color 300ms ease-in-out;
+        transition: background-color 200ms ease-in-out;
         font-size: var(--p-font-size);
         display: flex;
         justify-content: center;
@@ -99,7 +107,7 @@ body{
         background-color: var(--Orange);
 
     }
-    .rating_number:active{
+    .rating_numbers_container .active{
         background-color: var(--White);
         color: var(--Very-Dark-Blue);
     }
@@ -108,6 +116,9 @@ body{
         padding: 1em ;
         border-radius: 3em;
         font-family: "Overpass", sans-serif;
+        font-weight: 700;
+        color: var(--Very-Dark-Blue);
+        letter-spacing: 2PX;
         background-color: var(--Orange);
         border: none;
         cursor: pointer;
@@ -115,5 +126,49 @@ body{
     }
     .rating_button:hover{
         background-color: var(--White);
-    }   
+    }  
+    /* rating card component end */
+    /* Thank's component start */
+
+    .thank_you_state_container{
+        justify-content: center;
+        align-items: center;
+        display: none;
+        /* gap: .5em; */
+    }
+    .thank_header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+    .thanks_text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid silver; */
+    }
+    .thank_you_state_container .thank_paragraph{
+        text-align: center;
+        font-size: 13px;
+    }
+
+    /* .thank_you_state_container .card_title{
+        border: solid red 2px
+    } */
+
+    .thank_banner{
+        
+        font-size: 12px;
+        color: var(--Orange);
+        background-color: var(--Very-Dark-Blue);
+        padding: .5em 1em;
+        border-radius: 2em;
+        margin: 0 auto;
+    }
+    .attribution{
+        font-size: 12px;
+    }
 }

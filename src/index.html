@@ -17,10 +17,10 @@
   </head>
   <body>
     <!-- Rating state start -->
-    <section class="container">
+    <section class="rating_state_container card_style">
       <div class="rating_state_text">
         <span class="star">
-          <img src="./images/icon-star.svg" alt="star" />
+          <img src="../images/icon-star.svg" alt="star" />
         </span>
         <div class="text_part">
           <h2 class="card_title">How did we do?</h2>
@@ -32,23 +32,39 @@
       </div>
       <div class="rating_container">
         <div class="rating_numbers_container">
-          <span class="rating_number star">1</span
-          ><span class="rating_number star">2</span
-          ><span class="rating_number star">3</span
-          ><span class="rating_number star">4</span
-          ><span class="rating_number star">5</span>
+          <span class="rating_number star one">1</span
+          ><span class="rating_number star two">2</span
+          ><span class="rating_number star three">3</span
+          ><span class="rating_number star four">4</span
+          ><span class="rating_number star five">5</span>
         </div>
-        <button class="rating_button">Submit</button>
+        <button class="rating_button">SUBMIT</button>
       </div>
     </section>
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
+    <section class="thank_you_state_container card_style">
+      <div class="thank_header">
+        <span class="thanks_image">
+          <img src="../images/illustration-thank-you.svg" alt="thank_you" />
+        </span>
 
-    You selected
-    <!-- Add rating here -->
-    out of 5 Thank you! We appreciate you taking the time to give a rating. If
-    you ever need more support, don’t hesitate to get in touch!
+        <div class="thank_banner">
+          You selected
+          <!-- Add rating here -->
+          <span class="current_rating">0</span>
+          out of 5
+        </div>
+      </div>
+      <div class="thanks_text">
+        <h2 class="card_title">Thank you!</h2>
+        <p class="card_content_text thank_paragraph">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+    </section>
 
     <!-- Thank you state end -->
 
@@ -58,5 +74,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Doking517</a>.
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>
