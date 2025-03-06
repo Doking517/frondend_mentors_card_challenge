@@ -11,6 +11,7 @@
     --Light-Grey: hsl(217, 12%, 63%);
     --Dark-Blue: hsl(213, 19%, 18%);
     --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --test: hsl(210, 19%, 18%);
     --p-font-size: 15px;
     --Mobile: 375px;
     --Desktop: 1440px;
@@ -43,13 +44,17 @@ body{
         
     }
     .container .star{
+        
         background-color: var(--Very-Dark-Blue);
-        padding: .7rem;
+        padding: 1em;
         border-radius: 50%;
     }
-   
+   .star img{
+    transform-origin: center;
+    transform: scale(.9);
+   }
     .text_part{
-        margin: 1.5em 0;
+        margin: 2.5em 0;
         width: auto;
         /* border: 2px green solid; */
     }
@@ -81,9 +86,12 @@ body{
         color: var(--Light-Grey);
         cursor: pointer;
         transition: background-color 300ms ease-in-out;
+        font-size: var(--p-font-size);
         display: flex;
         justify-content: center;
         align-items: center;
+        font-family: "Overpass",sans-serif;
+        font-weight: 400;
         
     }
     .rating_number:hover{
