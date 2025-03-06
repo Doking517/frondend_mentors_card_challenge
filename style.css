@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+/* @font-face {
+    font-family: "Overpass";
+    src: url("https://fonts.google.com/specimen/Overpass");
+    font-weight: 700;
+} */
+
+:root{
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --p-font-size: 15px;
+    --Mobile: 375px;
+    --Desktop: 1440px;
+
+   
+}
+
+body{
+    font-family: "Overpass", sans-serif;
+    font-weight: 400;
+    background-color: var(--Very-Dark-Blue);
+    color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+@media (max-width: 375px) {
+   
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 76dvw;
+        background-color: var(--Dark-Blue);
+        padding: 1.5em;
+        border-radius: 1em;
+        
+    }
+    .container .star{
+        background-color: var(--Very-Dark-Blue);
+        padding: .7rem;
+        border-radius: 50%;
+    }
+   
+    .text_part{
+        margin: 1.5em 0;
+        width: auto;
+        /* border: 2px green solid; */
+    }
+
+    .text_part .card_title{
+        font-family: "Overpass",sans-serif;
+        font-weight: 700;
+        margin-top: .5em;
+    }
+    .text_part .card_content_text{
+        color: var(--Light-Grey);
+        font-size: var(--p-font-size);
+    }
+
+    .rating_container{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        
+        /* border: 2px solid blue; */
+    }
+    .rating_numbers_container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .rating_number{
+        color: var(--Light-Grey);
+        cursor: pointer;
+        transition: background-color 300ms ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .rating_number:hover{
+        color: var(--White);
+        background-color: var(--Orange);
+
+    }
+    .rating_number:active{
+        background-color: var(--White);
+        color: var(--Very-Dark-Blue);
+    }
+
+    .rating_button{
+        padding: 1em ;
+        border-radius: 3em;
+        font-family: "Overpass", sans-serif;
+        background-color: var(--Orange);
+        border: none;
+        cursor: pointer;
+        transition: background-color 250ms ease-in-out;
+    }
+    .rating_button:hover{
+        background-color: var(--White);
+    }   
+}
