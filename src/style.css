@@ -129,12 +129,15 @@ body{
     }  
     /* rating card component end */
     /* Thank's component start */
-
+    
     .thank_you_state_container{
         justify-content: center;
         align-items: center;
         display: none;
         /* gap: .5em; */
+    }
+    .p-2{
+        font-size: 13px;
     }
     .thank_header{
         display: flex;
