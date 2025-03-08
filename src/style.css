@@ -32,7 +32,7 @@ body{
 .card_style{
     display: flex;
     flex-direction: column;
-    width: 40dvw;
+    width: 20dvw;
     background-color: var(--Dark-Blue);
     padding: 2em 1.5em;
     border-radius: 1em;
